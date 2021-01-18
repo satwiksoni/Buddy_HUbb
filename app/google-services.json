@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "46884794151",
+    "project_id": "buddy-hubb",
+    "storage_bucket": "buddy-hubb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46884794151:android:e96502474a5c2928cdc302",
+        "android_client_info": {
+          "package_name": "com.example.buddy_hubb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "46884794151-8r5fnrut17qtmt7cb62rl4l16fviifo4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBM5Z3ExDy2LwARm3BesrhwmxV7R5Cz3mI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "46884794151-8r5fnrut17qtmt7cb62rl4l16fviifo4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Buddy_HuBB</string>
+    <string name="verify">Verify %s</string>
+    <string name="Waiting_text">Waiting to automatically detect an SMS sent to \n %s Wrong Number?</string>
+</resources>

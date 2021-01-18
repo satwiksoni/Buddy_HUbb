@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SplashTheme" parent="Theme.Buddy_HuBB">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@drawable/gradient_start</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+</resources>
