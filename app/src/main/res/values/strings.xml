@@ -2,4 +2,15 @@
     <string name="app_name">Buddy_HuBB</string>
     <string name="verify">Verify %s</string>
     <string name="Waiting_text">Waiting to automatically detect an SMS sent to \n %s Wrong Number?</string>
+    <string name="like_message">Like message</string>
+    <string name="monday">MONDAY</string>
+    <string name="tuesday">TUESDAY</string>
+    <string name="wednesday">WEDNESDAY</string>
+    <string name="thursday">THURSDAY</string>
+    <string name="friday">FIRDAY</string>
+    <string name="saturday">SATURDAY</string>
+    <string name="sunday">SUNDAY</string>
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+
 </resources>

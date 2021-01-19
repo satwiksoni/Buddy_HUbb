@@ -33,6 +33,23 @@
 
 </style>
 
+    <style name="ChatShapeAppearance">
+        <item name="color">@color/dark_orange</item>
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomLeft">22dp</item>
+        <item name="cornerSizeBottomRight">8dp</item>
+        <item name="cornerSizeTopLeft">22dp</item>
+        <item name="cornerSizeTopRight">22dp</item>
+
+    </style>
+-<style name="CustomMediumShapeAppearance">
+    <item name="cornerFamily">rounded</item>
+    <item name="cornerSizeTopLeft">22dp</item>
+    <item name="cornerSizeBottomLeft">8dp</item>
+    <item name="cornerSizeBottomRight">22dp</item>
+    <item name="cornerSizeTopRight">22dp</item>
+
+</style>
 
 
 </resources>
