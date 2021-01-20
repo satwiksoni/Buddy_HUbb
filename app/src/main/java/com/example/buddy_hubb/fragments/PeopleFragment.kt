@@ -34,7 +34,7 @@ class PeopleFragment : Fragment() {
 
     val database by lazy {
         FirebaseFirestore.getInstance().collection("user")
-            .orderBy("name",Query.Direction.DESCENDING)
+            .orderBy("name",Query.Direction.ASCENDING)
     }
 
     override fun onCreateView(inflater: LayoutInflater,
@@ -78,9 +78,9 @@ class PeopleFragment : Fragment() {
                 if(holder is UserViewHolder) {
                     holder.bind(user = model){ name: String, image: String, uid: String ->
                        val intent=Intent(requireContext(),ChatActivity::class.java)
-                        intent.putExtra(NAME,name)
-                        intent.putExtra(IMAGE,image)
-                        intent.putExtra(UID,uid)
+                        intent.putExtra(USER_NAME,name)
+                        intent.putExtra(USER_THUMB_IMAGE,image)
+                        intent.putExtra(USER_ID,uid)
                         startActivity(intent)
 
                     }

@@ -6,7 +6,7 @@ import com.example.buddy_hubb.utils.formatAsHeader
 import java.util.*
 
 
-interface chatEvent
+interface ChatEvent
 {
     val sentAt: Date
 }
@@ -18,14 +18,14 @@ data class Message(
     val status:Int=1,
     val liked:Boolean=false,
     override val sentAt:Date=Date()
-):chatEvent
+):ChatEvent
 {
     constructor() : this("","","","",1,false,Date())
 }
 
 data class DateHeader(
     override val sentAt: Date= Date(), val context:Context
-):chatEvent
+):ChatEvent
 {
-    val datw=sentAt.formatAsHeader(context)
+    val date=sentAt.formatAsHeader(context)
 }
