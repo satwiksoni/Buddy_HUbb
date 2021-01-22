@@ -4,11 +4,16 @@
     android:thickness="@dimen/material_emphasis_high_type"
     android:padding="10dp">
     <stroke
+
         android:width="2dp"
         android:dashGap="10sp"
 
         android:color="@color/Main_orange"/>
     <corners
-        android:radius="10dp"/>
+        android:radius="13dp"/>
+    <gradient
+        android:centerColor="@color/Main_orange"
+        android:endColor="@color/Main_orange"
+        android:startColor="@color/Main_orange"/>
     
 </shape>

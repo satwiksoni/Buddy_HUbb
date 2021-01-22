@@ -35,6 +35,7 @@ class ChatsFragment : Fragment() {
     ): View? {
         viewManager = LinearLayoutManager(requireContext())
         setupAdapter()
+
         return inflater.inflate(R.layout.fragment_chats, container, false)
     }
 

@@ -9,7 +9,7 @@
 //import androidx.recyclerview.widget.LinearLayoutManager
 //import com.example.buddy_hubb.adapter.ChatAdapter
 //import com.example.buddy_hubb.models.*
-//import com.example.buddy_hubb.utils.KeyboardVisibilityUtil
+//import com.example.buddy_hubb.utils.KeyboardVisibicdlityUtil
 //import com.example.buddy_hubb.utils.isSameDayAs
 //import com.google.firebase.auth.FirebaseAuth
 //import com.google.firebase.database.*
@@ -21,7 +21,7 @@
 //import com.vanniktech.emoji.google.GoogleEmojiProvider
 //import kotlinx.android.synthetic.main.activity_chat.*
 //import kotlinx.coroutines.CoroutineScope
-//import kotlinx.coroutines.Dispatchers
+//import kotlinx.coroutines.Dispatchersf
 //import kotlinx.coroutines.delay
 //import kotlinx.coroutines.launch
 //import com.google.firebase.database.ChildEventListener as ChildEventListener
@@ -248,6 +248,8 @@ package com.example.buddy_hubb
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.buddy_hubb.adapter.ChatAdapter
@@ -512,4 +514,5 @@ class ChatActivity : AppCompatActivity() {
             return intent
         }
     }
+
 }
