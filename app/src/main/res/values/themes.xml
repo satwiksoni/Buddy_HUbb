@@ -18,7 +18,7 @@
     <item name="cornerFamily">rounded</item>
     <item name="cornerSize">60dp</item>
     </style>
-    
+
     <style name="SplashTheme" parent="Theme.Buddy_HuBB">
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowBackground">@drawable/gradient_start</item>

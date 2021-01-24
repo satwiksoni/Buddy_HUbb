@@ -60,6 +60,7 @@ class OtpActivity : AppCompatActivity() {
                     sentcodeEt.setText(code)
                 }
                 else
+
                     Toast.makeText(applicationContext,"Authantication failed!",Toast.LENGTH_LONG).show()
 
                 if (::progressDialog.isInitialized) {
@@ -249,4 +250,3 @@ fun Context.createProgressDialog(message: String, isCancelable: Boolean): Progre
 }
 //progressDialog = createProgressDialog("Detecting Verification Code", false)
 //progressDialog.show()
-//

@@ -10,11 +10,12 @@ data class User(
     val deviceToken:String,
     val status:String,
     val onlineStatus: Boolean,
+    val coverImage:String
 
                 )
 {
     /** Empty [Constructor] for Firebase */
-    constructor():this("","","","","","",false,)
+    constructor():this("","","","","","",false,"")
 //    constructor(name: String, imageUrl: String, thumbImage: String, uid: String) :
 //            this(name, imageUrl, thumbImage, "", uid = uid, status = "Hey There, I am using whatsapp", onlineStatus = false)
 
@@ -23,7 +24,7 @@ data class User(
                  thumbImage:String,
                  uid:String,
                  ):
-            this(name,imageUrl,thumbImage,uid=uid,"",status="Hey..Just joined this cool platform.",onlineStatus=false)
+            this(name,imageUrl,thumbImage,uid=uid,"",status="Hey..Just joined this cool platform.",onlineStatus=false,"")
 
 
 

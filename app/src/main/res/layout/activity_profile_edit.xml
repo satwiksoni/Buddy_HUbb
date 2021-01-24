@@ -17,7 +17,7 @@
         android:background="?attr/colorPrimary"
         app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light"
         android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
-        app:title="Profile"/>
+        app:title="Edit Profile"/>
 
 
     <RelativeLayout
@@ -25,81 +25,7 @@
         android:layout_height="match_parent"
         android:background="@color/white"
         android:padding="30dp"
-        tools:context=".SettingActivity">
-
-
-        <!-- TODO: Update blank fragment layout -->
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cv1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/backgroundrl"
-            android:backgroundTint="@color/Main_orange"
-            app:cardCornerRadius="10dp">
-
-            <RelativeLayout
-
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/background_et"
-                android:padding="10dp">
-
-                <ImageView
-                    android:id="@+id/cover_image_settings"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_marginTop="15dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/two" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/profile_image_settings"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="140dp"
-                    android:adjustViewBounds="true"
-                    android:backgroundTint="@color/black"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/avatar"
-                    app:shapeAppearanceOverlay="@style/RoundedImageView" />
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="31dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="184dp"
-                    android:layout_marginTop="230dp"
-                    android:backgroundTint="@color/dark_orange"
-                    android:src="@drawable/ic_back" />
-
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/dp"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_marginLeft="180dp"
-                    android:layout_marginTop="225dp"
-                    android:src="@drawable/ic_baseline_add_a_photo_24" />
-
-                <TextView
-                    android:id="@+id/username_settings"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/profile_image_settings"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="20dp"
-                    android:fontFamily="sans-serif-condensed-light"
-                    android:text="Username"
-                    android:textColor="#ffffff"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
+        tools:context=".ProfileEditActivity">
 
         <LinearLayout
             android:id="@+id/ll2"
@@ -156,35 +82,37 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/ll2"
             android:padding="5dp"
-            android:text="Profile"
+            android:text="About"
             android:textColor="@color/Main_orange"
             android:textSize="18sp"
             android:textStyle="bold" />
+
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/ll2"
             android:layout_gravity="center"
-            android:background="@drawable/background_et"
             android:layout_marginTop="30dp"
             android:gravity="center"
             android:orientation="vertical">
 
 
-        <LinearLayout
+            <LinearLayout
                 android:id="@+id/phoneDetails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingLeft="12dp"
                 android:paddingTop="5dp"
-            android:background="@drawable/background_et"
+                android:background="@drawable/background_et"
 
-            android:paddingBottom="5dp">
+                android:paddingBottom="5dp">
 
                 <TextView
-                    android:id="@+id/phnoeNo"
+                    android:id="@+id/phoneNo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
@@ -209,6 +137,55 @@
                     android:textStyle="normal" />
 
             </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="1dp"
+
+                android:id="@+id/Username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="12dp"
+                android:paddingTop="5dp"
+                android:background="@drawable/background_et"
+
+                android:paddingBottom="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/UserName"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Light"
+                        android:textColor="@color/text_grey"
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+                    <ImageView
+                        android:id="@+id/usernameET"
+                        android:layout_width="25dp"
+                        android:onClick="usernameSaver"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:src="@drawable/ic_baseline_edit_24"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/esehi2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:text="Username"
+                    android:textColor="@color/emoji_gray70"
+                    android:textSize="10sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/statusDetails"
@@ -225,7 +202,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-                    <TextView
+                    <EditText
                         android:id="@+id/status"
                         android:layout_width="0dp"
                         android:layout_weight="1"
@@ -237,7 +214,7 @@
                         android:textSize="18sp"
                         android:textStyle="normal" />
                     <ImageView
-                        android:id="@+id/statuspen"
+                        android:id="@+id/statusET"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_marginRight="4dp"
@@ -261,7 +238,9 @@
 
             </LinearLayout>
 
+
             <LinearLayout
+
                 android:layout_marginTop="1dp"
 
                 android:id="@+id/EmailDetails"
@@ -278,8 +257,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/Email"
+                    <EditText
+                        android:id="@+id/Emailid"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
@@ -291,6 +270,7 @@
                         android:textSize="18sp"
                         android:textStyle="normal" />
                     <ImageView
+                        android:id="@+id/emailEtBT"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_marginRight="4dp"
@@ -304,6 +284,53 @@
                     android:layout_gravity="left"
                     android:layout_weight="1"
                     android:text="Email"
+                    android:textColor="@color/emoji_gray70"
+                    android:textSize="10sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="1dp"
+
+                android:id="@+id/FacebookDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="12dp"
+                android:paddingTop="5dp"
+                android:background="@drawable/background_et"
+
+                android:paddingBottom="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/Facebookurl"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/text_grey"
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:src="@drawable/ic_baseline_edit_24"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/esehi1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:text="Facebook"
                     android:textColor="@color/emoji_gray70"
                     android:textSize="10sp"
                     android:textStyle="normal" />
