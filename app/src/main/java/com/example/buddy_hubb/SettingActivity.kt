@@ -70,8 +70,12 @@ class SettingActivity : AppCompatActivity() {
 
                 //UserName
                 currentUser=it.toObject(User::class.java)!!
+
                 username_settings.setText(currentUser.name)
                 status.setText(currentUser.status)
+                phnoeNo.setText(currentUser.phoneNumber)
+                if(!currentUser.Email.equals(""))
+                Email.setText(currentUser.Email)
 
                 //Dp
                 Picasso.get()
@@ -81,11 +85,14 @@ class SettingActivity : AppCompatActivity() {
                     .into(profile_image_settings)
 
                 //Cover
-                Picasso.get()
-                        .load(currentUser.coverImage)
-                        .placeholder(R.drawable.one)
-                        .error(R.drawable.one)
-                        .into(cover_image_settings)
+                if(!currentUser.coverImage.equals("")) {
+                    Picasso.get()
+                            .load(currentUser.coverImage)
+                            .placeholder(R.drawable.one)
+                            .error(R.drawable.one)
+                            .into(cover_image_settings)
+                }
+
             }
 
 
@@ -329,3 +336,102 @@ class SettingActivity : AppCompatActivity() {
 
 
 }
+
+
+//<?xml version="1.0" encoding="utf-8"?>
+//<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+//    xmlns:app="http://schemas.android.com/apk/res-auto"
+//    xmlns:tools="http://schemas.android.com/tools"
+//    android:layout_width="match_parent"
+//    android:layout_height="wrap_content"
+//    android:background="?attr/selectableItemBackground"
+//    android:clickable="true"
+//    android:focusable="true"
+//    android:orientation="horizontal"
+//    android:padding="10dp">
+//
+//    <com.google.android.material.imageview.ShapeableImageView
+//        android:id="@+id/userImgView"
+//        android:layout_width="50dp"
+//        android:layout_height="50dp"
+//        android:adjustViewBounds="true"
+//        android:clickable="true"
+//        android:focusable="true"
+//        android:scaleType="centerCrop"
+//        android:src="@drawable/avatar"
+//        app:shapeAppearanceOverlay="@style/RoundedImageViewSmall" />
+//
+//    <LinearLayout
+//        android:layout_width="match_parent"
+//        android:layout_height="wrap_content"
+//        android:layout_gravity="center"
+//        android:layout_marginStart="8dp"
+//        android:orientation="vertical"
+//        android:layout_marginLeft="8dp">
+//
+//        <LinearLayout
+//            android:layout_width="match_parent"
+//            android:layout_height="match_parent">
+//
+//            <TextView
+//                android:id="@+id/titleTv"
+//                android:layout_width="0dp"
+//                android:layout_height="wrap_content"
+//                android:layout_weight="1"
+//                android:ellipsize="end"
+//                android:lines="1"
+//                android:textColor="@android:color/black"
+//                android:textSize="18sp"
+//                android:textStyle="bold"
+//                tools:text="Satwik Soni" />
+//
+//            <TextView
+//                android:id="@+id/timeTv"
+//                android:layout_width="wrap_content"
+//                android:layout_height="wrap_content"
+//                android:layout_marginStart="12dp"
+//                android:ellipsize="end"
+//                android:textColor="@android:color/black"
+//                android:textSize="14sp"
+//                android:visibility="visible"
+//                tools:text="6/1/20"
+//                android:layout_marginLeft="12dp" />
+//
+//
+//        </LinearLayout>
+//
+//        <LinearLayout
+//            android:layout_width="match_parent"
+//            android:layout_height="match_parent">
+//
+//            <TextView
+//                android:id="@+id/subTitleTv"
+//                android:layout_width="0dp"
+//                android:layout_height="wrap_content"
+//                android:layout_weight="1"
+//                android:ellipsize="end"
+//                android:lines="1"
+//                android:textSize="14sp"
+//                tools:text="Hey,how are you" />
+//
+//            <TextView
+//                android:id="@+id/countTv"
+//                android:layout_width="wrap_content"
+//                android:layout_height="wrap_content"
+//                android:layout_marginStart="12dp"
+//                android:ellipsize="end"
+//                android:background="@drawable/count_background"
+//                android:textColor="@android:color/white"
+//                android:textSize="14sp"
+//                android:paddingStart="8dp"
+//                android:paddingEnd="8dp"
+//                android:paddingBottom="2dp"
+//                android:paddingTop="2dp"
+//                android:visibility="visible"
+//                tools:text="6"
+//                android:layout_marginLeft="12dp" />
+//        </LinearLayout>
+//
+//    </LinearLayout>
+//
+//</LinearLayout>

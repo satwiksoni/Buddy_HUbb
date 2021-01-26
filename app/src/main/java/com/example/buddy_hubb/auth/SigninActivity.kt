@@ -32,6 +32,7 @@ class SigninActivity : AppCompatActivity() {
         FirebaseAuth.getInstance()
     }
     lateinit var downloadUrl:String
+    lateinit var phoneNumber:String
 
 
 
@@ -39,6 +40,8 @@ class SigninActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_signin)
+
+        phoneNumber= intent.getStringExtra("phone").toString()
 
         userImgView.setOnClickListener {
             createPermissionForImage()
@@ -56,7 +59,7 @@ class SigninActivity : AppCompatActivity() {
                 Toast.makeText(this,"Image should not be empty..!",Toast.LENGTH_LONG).show()
             else
             {
-                val user= User(name,downloadUrl,downloadUrl,auth.uid!!)
+                val user= User(name,downloadUrl,downloadUrl,auth.uid!!,phoneNumber)
                 database.collection("user").document(auth.uid!!).set(user).addOnSuccessListener {
                     startActivity(Intent(this, MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK))
                     finish()

@@ -189,7 +189,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_weight="1"
-                    android:maxLength="10"
                     android:maxLines="1"
                     android:singleLine="true"
                     android:text="9754095967"
@@ -286,7 +285,7 @@
                         android:layout_gravity="left"
                         android:ellipsize="end"
                         android:maxLines="1"
-                        android:text="satwiksoni5998@gmail.com"
+                        android:text="xyz@gmail.com"
                         android:textColor="@color/text_grey"
                         android:textSize="18sp"
                         android:textStyle="normal" />

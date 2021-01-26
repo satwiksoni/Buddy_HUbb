@@ -16,8 +16,39 @@
         android:elevation="10dp"
         android:background="?attr/colorPrimary"
         app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light"
-        android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
-        app:title="BuDDY-HuB" />
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile_image"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/avatar"
+            android:backgroundTint="@color/black"
+            android:background="@drawable/background_im" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textSize="18sp"
+            android:layout_marginLeft="26dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/online"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/online"
+            android:visibility="gone"
+            android:textSize="12sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"

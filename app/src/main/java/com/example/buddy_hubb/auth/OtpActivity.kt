@@ -169,6 +169,7 @@ class OtpActivity : AppCompatActivity() {
                     val user = task.result?.user
                     Toast.makeText(applicationContext,"Successful",Toast.LENGTH_LONG).show()
                     val intent= Intent(applicationContext, SigninActivity::class.java)
+                    intent.putExtra("phone",phoneNumber)
                     startActivity(intent)
                     finish()
 

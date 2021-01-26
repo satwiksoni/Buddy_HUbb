@@ -138,7 +138,7 @@
 
             </LinearLayout>
             <LinearLayout
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="3dp"
 
                 android:id="@+id/Username"
                 android:layout_width="match_parent"
@@ -188,10 +188,11 @@
             </LinearLayout>
 
             <LinearLayout
+                android:layout_marginTop="3dp"
+
                 android:id="@+id/statusDetails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
                 android:orientation="vertical"
                 android:background="@drawable/background_et"
                 android:paddingLeft="12dp"
@@ -241,8 +242,7 @@
 
             <LinearLayout
 
-                android:layout_marginTop="1dp"
-
+                android:layout_marginTop="3dp"
                 android:id="@+id/EmailDetails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -290,8 +290,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginTop="1dp"
-
+                android:layout_marginTop="3dp"
                 android:id="@+id/FacebookDetails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -309,6 +308,7 @@
                     <EditText
                         android:id="@+id/Facebookurl"
                         android:layout_width="0dp"
+                        android:hint="Facebook"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
@@ -318,6 +318,7 @@
                         android:textSize="18sp"
                         android:textStyle="normal" />
                     <ImageView
+                        android:id="@+id/facebooketdone"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_marginRight="4dp"
@@ -326,6 +327,102 @@
                 </LinearLayout>
                 <TextView
                     android:id="@+id/esehi1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:text="Facebook"
+                    android:textColor="@color/emoji_gray70"
+                    android:textSize="10sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="3dp"
+                android:id="@+id/InstaDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="12dp"
+                android:paddingTop="5dp"
+                android:background="@drawable/background_et"
+
+                android:paddingBottom="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/Instaurl"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:ellipsize="end"
+                        android:hint="Instagram"
+                        android:maxLines="1"
+                        android:textColor="@color/text_grey"
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+                    <ImageView
+                        android:id="@+id/instabutton"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:src="@drawable/ic_baseline_edit_24"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/esehi3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:text="Facebook"
+                    android:textColor="@color/emoji_gray70"
+                    android:textSize="10sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="3dp"
+                android:id="@+id/LinkedinDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="12dp"
+                android:paddingTop="5dp"
+                android:background="@drawable/background_et"
+
+                android:paddingBottom="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:hint="LinkedIn"
+                        android:id="@+id/Linkedinurl"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/text_grey"
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+                    <ImageView
+                        android:id="@+id/link"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:src="@drawable/ic_baseline_edit_24"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/esehi4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"

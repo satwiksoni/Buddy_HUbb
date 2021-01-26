@@ -29,9 +29,8 @@ class ProfileEditActivity : AppCompatActivity() {
     val auth by lazy {
         FirebaseAuth.getInstance()
     }
+
     lateinit var downloadUrl:String
-
-
 
     private var imageuri: Uri?=null
     private var RequestCode=438
@@ -53,10 +52,11 @@ class ProfileEditActivity : AppCompatActivity() {
                 currentUser=it.toObject(User::class.java)!!
                 UserName.setText(currentUser.name)
                 status.setText(currentUser.status)
-                phoneNo.setText(currentUser.status)
-                Emailid.setText(currentUser.status)
-                Facebookurl.setText(currentUser.status)
-
+                phoneNo.setText(currentUser.phoneNumber)
+                Emailid.setText(currentUser.Email)
+                Facebookurl.setText(currentUser.Facebook)
+                Instaurl.setText(currentUser.Insta)
+                Linkedinurl.setText(currentUser.LinkedIn)
             }
 
 
@@ -76,12 +76,36 @@ class ProfileEditActivity : AppCompatActivity() {
         }
 
         emailEtBT.setOnClickListener {
-            val key="email"
+            val key="Email"
             val value=Emailid.text
             onEditClicked(key,value = value.toString())
             startActivity(Intent(this,ProfileEditActivity::class.java))
             finish()
         }
+        facebooketdone.setOnClickListener {
+            val key="Facebook"
+            val value=Facebookurl.text
+            onEditClicked(key,value = "https://m.facebook.com/${value.toString()}")
+            startActivity(Intent(this,ProfileEditActivity::class.java))
+            finish()
+        }
+
+        instabutton.setOnClickListener {
+            val key="Insta"
+            val value=Instaurl.text
+            onEditClicked(key,value = "https://m.instagram.com/${value.toString()}")
+            startActivity(Intent(this,ProfileEditActivity::class.java))
+            finish()
+        }
+
+        link.setOnClickListener {
+            val key="LinkedIn"
+            val value=Emailid.text
+            onEditClicked(key,value = value.toString())
+            startActivity(Intent(this,ProfileEditActivity::class.java))
+            finish()
+        }
+
 
 
 
@@ -92,6 +116,7 @@ class ProfileEditActivity : AppCompatActivity() {
 
     fun onEditClicked(key:String,value:String)
     {
+
         database.collection("user").document(auth.uid!!).update(key,value).addOnSuccessListener {
             Toast.makeText(this,"Success...", Toast.LENGTH_LONG).show()
         }.addOnFailureListener{
