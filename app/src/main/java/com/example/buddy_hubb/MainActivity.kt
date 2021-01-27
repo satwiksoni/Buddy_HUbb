@@ -6,9 +6,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.Toast
 import com.example.buddy_hubb.adapter.ScreenSliderAdapter
-import com.example.buddy_hubb.fragments.SettingFragment
 import com.example.buddy_hubb.models.User
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
@@ -18,9 +16,6 @@ import com.google.firebase.storage.FirebaseStorage
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.toolbar
-import kotlinx.android.synthetic.main.activity_profile_edit.*
-import kotlinx.android.synthetic.main.activity_profile_edit.status
-import kotlinx.android.synthetic.main.setting.*
 
 class MainActivity : AppCompatActivity() {
     val database by lazy {
@@ -49,8 +44,8 @@ class MainActivity : AppCompatActivity() {
             when(pos)
             {
                 0->tab.text="CHATS"
-                1->tab.text="PEOPLE"
-                2->tab.text="SETTING"
+                1->tab.text="SAFE MODE"
+                2->tab.text="PEOPLE"
             }
 
         }).attach()

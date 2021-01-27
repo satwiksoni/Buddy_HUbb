@@ -48,6 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="5dp"
+                android:textIsSelectable="true"
                 android:textColor="@android:color/white"
                 android:textSize="14sp"
                 tools:text="Hello" />

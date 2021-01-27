@@ -1,5 +1,7 @@
 package com.example.buddy_hubb.adapter
 import android.app.AlertDialog
+import android.content.ClipboardManager
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,8 +19,8 @@ import kotlinx.android.synthetic.main.list_item_chat_recv_message.view.*
 import kotlinx.android.synthetic.main.list_item_date_header.view.*
 
 class ChatAdapter(private val list: MutableList<ChatEvent>, private val mCurrentUser: String) :
-    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
+    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     var firebaseUser:FirebaseUser=FirebaseAuth.getInstance().currentUser!!
     var highFiveClick: ((id: String, status: Boolean) -> Unit)? = null
 
@@ -69,6 +71,8 @@ class ChatAdapter(private val list: MutableList<ChatEvent>, private val mCurrent
     override fun getItemCount(): Int = list.size
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+
+
         when (val item = list[position]) {
             is DateHeader -> {
                 holder.itemView.textView.text = item.date

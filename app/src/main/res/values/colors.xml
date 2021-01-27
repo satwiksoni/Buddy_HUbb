@@ -19,6 +19,7 @@
     <color name="colorGradientMid">#00B0FF</color>
     <color name="colorGradientEnd">#01579B</color>
     <color name="text_grey">#272626</color>
+    <color name="grey">#A5A2A2</color>
 
 
 </resources>
